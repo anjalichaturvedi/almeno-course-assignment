@@ -10,8 +10,8 @@ This is a React-based application for managing and enrolling in courses. It prov
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/your-repo/course-management-system.git`
-2. Navigate to the project directory: `cd course-management-system`
+1. Clone the repository: `git clone https://github.com/anjalichaturvedi/alemeno-course-assignment.git`
+2. Navigate to the project directory: `cd js`
 3. Install dependencies: `npm install`
 
 ## Usage
