@@ -17,18 +17,34 @@ const CourseListingPage = () => {
     // Add more dummy courses here
   ]);
 
+  const [selectedCourse, setSelectedCourse] = useState(null);
+
+  const handleCourseClick = (courseId) => {
+    const course = courses.find(course => course.id === courseId);
+    setSelectedCourse(course);
+  };
+
   return (
     <div>
       <h1>Course Listing</h1>
       <ul>
         {courses.map(course => (
-          <li key={course.id}>
+          <li key={course.id} onClick={() => handleCourseClick(course.id)} style={{ cursor: 'pointer' }}>
             <p>{course.name}</p>
             <p>{course.instructor}</p>
             {/* Add more course information here */}
           </li>
         ))}
       </ul>
+
+      {selectedCourse && (
+        <div>
+          <h2>Course Details</h2>
+          <p><strong>Course Name:</strong> {selectedCourse.name}</p>
+          <p><strong>Instructor:</strong> {selectedCourse.instructor}</p>
+          {/* Display more course details here */}
+        </div>
+      )}
     </div>
   );
 }
